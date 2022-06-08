@@ -10,12 +10,16 @@ www.github.com/gopikrishnangs44
 
 
 
-INSTALLATION
+INSTALLATION 
+
 pip install IGRApy
+
 (https://pypi.org/project/IGRApy/)
 
 USAGE:
+
 From IGRApy import IGRA
+
 
 IGRA.igra(file_path, stat=['INM0040032'], save=True, save_dir='path_to_the_folder_for_output')
 
