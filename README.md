@@ -20,7 +20,7 @@ pip install IGRApy
 
 From IGRApy import IGRA
 
-IGRA.igra(file_path, stat=['INM0040032'], save=True, save_dir='path_to_the_folder_for_output')
+IGRA.igra(file_path, stat=['INM00043003'], save=True, save_dir='path_to_the_folder_for_output')
 
 **Description**
 
