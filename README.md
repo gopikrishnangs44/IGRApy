@@ -11,6 +11,7 @@ www.github.com/gopikrishnangs44
 
 
 **INSTALLATION**
+
 pip install IGRApy
 
 (https://pypi.org/project/IGRApy/)
