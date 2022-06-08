@@ -8,8 +8,13 @@ www.atmoslabiitkgp.com
 
 www.github.com/gopikrishnangs44
 
-USAGE:
 
+
+INSTALLATION
+pip install IGRApy
+(https://pypi.org/project/IGRApy/)
+
+USAGE:
 From IGRApy import IGRA
 
 IGRA.igra(file_path, stat=['INM0040032'], save=True, save_dir='path_to_the_folder_for_output')
@@ -40,3 +45,5 @@ DATA that can be used in this package:
 https://www.ncei.noaa.gov/pub/data/igra/monthly/monthly-por/
 
 FORMAT AND DESCRIPTION OF DATA: https://www.ncei.noaa.gov/pub/data/igra/monthly/igra2-monthly-format.txt
+
+
