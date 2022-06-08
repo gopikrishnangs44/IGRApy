@@ -47,7 +47,8 @@ IGRA.igra(file_path, stat=['INM0040032'], save=True, save_dir='path_to_the_folde
 x = IGRA.igra(file_path, stat=['INM0040032'], save=True/None)
 IGRA.plot_fig(x)
 
-
+**SEE EXAMPLE.ipynb for more details.
+**
 
 DATA that can be used in this package:
 https://www.ncei.noaa.gov/pub/data/igra/monthly/monthly-por/
