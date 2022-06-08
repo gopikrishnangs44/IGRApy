@@ -1,0 +1,8 @@
+README.md
+setup.py
+IGRApy/IGRA.py
+IGRApy/__init__.py
+IGRApy.egg-info/PKG-INFO
+IGRApy.egg-info/SOURCES.txt
+IGRApy.egg-info/dependency_links.txt
+IGRApy.egg-info/top_level.txt
