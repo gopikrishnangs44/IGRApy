@@ -55,7 +55,11 @@ IGRA.igra(file_path, stat=['INM00043003'], save=True, save_dir='path_to_the_fold
 **A graphical representation of the data is available through:**
 
 x = IGRA.igra(file_path, stat=['INM0040032'], save=True/None)
+
+
 IGRA.plot_fig(x)
+
+
 
 **SEE EXAMPLE.ipynb for more details**
 
