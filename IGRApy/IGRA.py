@@ -24,8 +24,9 @@ def igra(file_dir, stat=[], save='', save_dir='' ):
                     q1 = xr.DataArray(pd.DataFrame(dfa1[4]),  coords=[ m0,lev], dims=['time','lev'])
                     jj.append(q1)
                 except:
-                    q1_masked  = q1.where(q1['time'] == -9999.)  
-                    q1_masked['lev'] = lev
+                    dummy_date = pd.date_range('01-01-1950','01-01-2022')
+                    myArr = np.empty((len(dummy_date),1))
+                    q1_masked = xr.DataArray(myArr, coords=[dummy_date, lev], dims=['time','lev'])
                     jj.append(q1_masked)
                 pp = []
             c = xr.combine_by_coords(jj)
@@ -53,8 +54,9 @@ def igra(file_dir, stat=[], save='', save_dir='' ):
                         q1 = xr.DataArray(pd.DataFrame(dfa1[4]),  coords=[ m0,lev], dims=['time','lev'])
                         jj.append(q1)
                     except:
-                        q1_masked  = q1.where(q1['time'] == -9999.)  
-                        q1_masked['lev'] = lev
+                        dummy_date = pd.date_range('01-01-1950','01-01-2022')
+                        myArr = np.empty((len(dummy_date),1))
+                        q1_masked = xr.DataArray(myArr, coords=[dummy_date, lev], dims=['time','lev'])
                         jj.append(q1_masked)
                     pp = []
                 c = xr.combine_by_coords(jj)
