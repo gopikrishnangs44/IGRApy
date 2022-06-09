@@ -10,8 +10,7 @@ www.github.com/gopikrishnangs44
 
 
 
-**INSTALLATION
-**
+**INSTALLATION**
 
 pip install IGRApy
 
