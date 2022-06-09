@@ -16,7 +16,7 @@ pip install IGRApy
 
 (https://pypi.org/project/IGRApy/)
 
-USAGE:
+**USAGE:**
 
 **SEE THE EXAMPLE.ipynb for a detailed description on how to use the data**
 
