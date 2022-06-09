@@ -67,4 +67,12 @@ def plot_fig(var):
     plt.figure(figsize=(12,4), dpi=200)
     var.T.plot(cmap='jet', ylim=(1000,100))
     plt.show()
+
+def RH(temp,vapr):
+    temp1, vapr1 = temp/10, vapr/1000
+    es = 6.112*np.exp((17.62*temp1)/(temp1+243.12))
+    return vapr1/(es)*100
+
+def SH(vapr):
+    return 0.622*(vapr/vapr.lev)
         
