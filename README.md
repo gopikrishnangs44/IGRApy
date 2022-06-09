@@ -22,7 +22,7 @@ From IGRApy import IGRA
 
 data = IGRA.igra(file_path, stat=['INM00043003'], save=True, save_dir='path_to_the_folder_for_output')
 
-An xarrray with tep provided dataset will be saved to the variable 'data'.
+(An xarrray with the provided dataset will be saved to the variable 'data'.)
 
 **Description**
 
