@@ -8,6 +8,13 @@ www.atmoslabiitkgp.com
 
 www.github.com/gopikrishnangs44
 
+
+INSTALLATION
+
+pip install IGRApy
+
+(https://pypi.org/project/IGRApy/)
+
 USAGE:
 
 **SEE THE EXAMPLE.ipynb for a detailed description on how to use the data**
@@ -38,6 +45,12 @@ A graphical representation of the data is available through:
 
 x = IGRA.igra(file_path, stat=['INM0040032'], save=True/None)
 IGRA.plot_fig(x)
+
+Relative Humidity and Specific Humidity can be derived from the IGRA temperature and Water vapour datasets
+
+
+**SEE THE EXAMPLE.ipynb for a detailed description on how to use this**
+
 
 DATA that can be used in this package:
 https://www.ncei.noaa.gov/pub/data/igra/monthly/monthly-por/
