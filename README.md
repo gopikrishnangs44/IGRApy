@@ -42,8 +42,7 @@ eg: INM00043003.nc will be the output at the given save_dir
 eg: '/home/user/Desktop/IGRA/'
 
 
-**A graphical representation of the data is available through:
-**
+**A graphical representation of the data is available through:**
 
 x = IGRA.igra(file_path, stat=['INM0040032'], save=True/None)
 IGRA.plot_fig(x)
