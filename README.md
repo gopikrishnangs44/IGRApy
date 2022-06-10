@@ -49,7 +49,7 @@ IGRA.plot_fig(x)
 
 
 
-Relative Humidity and Specific Humidity can be derived from the IGRA temperature and Water vapour datasets
+Relative Humidity and Specific Humidity can be derived from the IGRA temperature and vapour pressure datasets
 
 
 **SEE THE EXAMPLE.ipynb for a detailed description on how to use this**
