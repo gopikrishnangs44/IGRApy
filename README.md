@@ -13,16 +13,11 @@ www.github.com/gopikrishnangs44
 **INSTALLATION**
 
 git clone https://github.com/gopikrishnangs44/IGRApy.git
-
 cd IGRApy
-
 python setup.py install
 
-
 OR
-
 pip install IGRApy
-
 (https://pypi.org/project/IGRApy/)
 
 **USAGE:**
