@@ -76,3 +76,46 @@ def RH(temp,vapr):
 def SH(vapr):
     return 0.622*(vapr/vapr.lev)
         
+    
+def igra_stn(fil, yr1, yr2, stn_no):
+    a = pd.read_csv(fil, header=None)
+    s = []
+    fi = 'INSTANT/por/INM000'+str(stn_no)+'-data.txt'
+    file = open(''+str(fi)+'','r')
+    for yr in range(yr1,yr2):
+        for line in file:
+            if line.startswith('#INM000'+str(stn_no)+' '+str(yr)+''):
+                s.append(line.strip())
+    print('s done')
+
+    s1 = []
+    for lookup in s:
+        with open(''+str(fi)+'') as myFile:
+            for num, line in enumerate(myFile, 1):
+                if lookup in line:
+                    #print(num)
+                    s1.append(num)
+    print('s1 done')
+
+    s2 = []
+    for i in range(0,len(s1)-1):
+        a1 = a.iloc[s1[i]:s1[i+1]-1,:]
+        s2.append(a1)
+    print('s2 done')
+
+    temp, pres, se = [],[],[]
+    for i in range(len(s2)):
+        dt = pd.Timestamp(''+str(s[i][13:17])+''+str(s[i][18:20])+''+str(s[i][21:23])+''+str(s[i][24:26])+'00')
+        #print(i,dt)
+        for j in range(len(s2[i][0])):
+            pres.append(float(str(s2[i].iloc[j])[14:20])/100)
+            temp.append(float(str(s2[i].iloc[j])[27:32])/10)
+        daa = xr.DataArray(temp, coords=[pres], dims=['pres'], name='temp')
+        daa1 = daa.where(daa!=-999.9, np.nan)#.sel(pres=slice(pres[0], 100))#.interp(pres=lev)
+        dt1 = pd.to_datetime(dt)
+        daa2 = daa1.assign_coords(time=dt1)
+        daa2 = daa2.drop_duplicates(dim='pres', keep='first')
+        se.append(daa2)
+        temp,pres=[],[]
+    data = xr.concat(se, dim='time').T
+    return data
